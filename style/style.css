@@ -33,7 +33,6 @@ header {
   top: 0;
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0)
   );
   transition: all 150ms ease-in-out;
@@ -127,12 +126,14 @@ main .sliderSection .contSlider .slider .sliderDiv {
 }
 main .sliderSection .contSlider .slider .sliderDiv .sliderImg {
   display: block;
-  min-width: 100%;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   image-rendering: optimizeQuality;
+  clip-path: inset(0px 0.1vw);  /*Esto corta la imagen para hacerla responsive*/ 
 }
 main .sliderSection .contSlider .slider .sliderDiv .captions {
+  z-index: 50;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -320,8 +321,11 @@ footer .redesFooter a {
         /* RESPONSIVE DESIGN */
   /* TABLETS */
 @media (max-width: 1024px){
+header .contHeader .logo img {
+    width: 235px;
+  }
   header .contHeader nav ul li .navLink { 
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   main .bannerTeamSection .team{
     height: 700px;
@@ -329,11 +333,9 @@ footer .redesFooter a {
 }
   /* MEDIANOS */
 @media (max-width: 992px){
-
 }
-
   /* TELEFONOS */
-@media (max-width: 576px){
+@media (max-width: 768px){
   header .contHeader {
     flex-direction: column;
     align-items: center;
