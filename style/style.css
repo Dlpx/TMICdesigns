@@ -1,0 +1,306 @@
+:root {
+  --red-op: #823636;
+  --blue-op: #2a5677;
+  --green-op: #52684c;
+  --yellow-op: #877b40;
+  --red: #ff3200;
+  --blue: #00d2e6;
+  --green: #7ddc00;
+  --yellow: #f0c800;
+  --sand: #e8e6cc;
+  --sand-ligth: #f7f6f0;
+  --black: #000000;
+  --black-light: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* 
+            HEADER 
+*/
+
+/* Configuracion fija HEADER */
+header {
+  z-index: 100;
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  transition: all 150ms ease-in-out;
+}
+header .contHeader {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 6vw;
+  height: 80px;
+  background-image: url(../src/logos/sombraHeader.png);
+  transition: all 150ms ease-in-out;
+}
+
+/* logo */
+header .contHeader .logo {
+  height: fit-content;
+  position: relative;
+  top: 30px;
+  transition: all 150ms ease-in-out;
+}
+header .contHeader .logo img {
+  width: 23vw;
+  transition: all 150ms ease-in-out;
+}
+/* nav */
+header .contHeader nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+header .contHeader nav ul li {
+  margin-left: 15px;
+}
+header .contHeader nav ul li .navLink {
+  color: var(--sand-ligth);
+  font-size: larger;
+  font-weight: bolder;
+  transition: all 150ms ease-in-out;
+}
+header .contHeader nav ul li .navLink:hover {
+    color: var(--yellow);
+}
+
+/* Configuracion variable HEADER*/
+.headerDark{
+    background: none;
+    background-color: var(--sand);
+}
+.contHeaderDark{
+    background-image: none !important;
+  background-color: var(--yellow-op);
+}
+.colorDark{
+    color: var(--black) !important;
+}
+.logoHidden {
+  display: none;
+}
+
+
+/* 
+            MAIN 
+*/
+
+/* slider */
+main {
+  width: 100%;
+}
+main .sliderSection .contSlider {
+  width: inherit;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+main .sliderSection .contSlider .slider {
+  margin-left: -100%;
+  width: 400%;
+  display: flex;
+  flex-direction: row;
+  transition: all 500ms ease-in-out;
+}
+main .sliderSection .contSlider .slider .sliderDiv {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main .sliderSection .contSlider .slider .sliderDiv .sliderImg {
+  display: block;
+  min-width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+main .sliderSection .contSlider .slider .sliderDiv .captions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 6vw;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+main .sliderSection .contSlider .slider .sliderDiv .captions .captionTitle {
+  font-size: 2rem;
+  color: var(--sand-ligth);
+}
+main .sliderSection .contSlider .slider .sliderDiv .captions .captionText {
+  font-size: 3rem;
+  color: var(--sand-ligth);
+}
+/* BOTONES */
+main .sliderSection .contSlider .contBtnSlider{
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));  
+}
+main .sliderSection .contSlider .contBtnSlider .btnSlider{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5vh;
+    cursor: pointer;
+}
+main .sliderSection .contSlider .contBtnSliderDer{
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+/* Banner y Team */
+main .bannerTeamSection {
+  width: inherit;
+}
+main .bannerTeamSection .banner {
+  height: 350px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--sand-ligth);
+}
+main .bannerTeamSection .banner p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--red-op);
+  text-align: center;
+}
+main .bannerTeamSection .banner .button {
+  margin: auto;
+  color: var(--sand-ligth);
+  background-color: var(--red-op);
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+main .bannerTeamSection .banner .button:hover {
+  background-color: var(--red);
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px black;
+}
+main .bannerTeamSection .banner .button:active {
+  transform: scale(0.9);
+  box-shadow: none;
+  background-color: var(--red-op);
+}
+main .bannerTeamSection .team {
+  height: 900px;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main .bannerTeamSection .team .meet {
+  margin: 60px 0;
+}
+main .bannerTeamSection .team .meet h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+main .bannerTeamSection .team .contTeam {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 50%;
+}
+main .bannerTeamSection .team .contTeam div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .bannerTeamSection .team .contTeam div .foto {
+  width: 20vw;
+  margin-bottom: 20px;
+}
+main .bannerTeamSection .team .contTeam div .nombre {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* 
+            FOOTER 
+*/
+footer {
+  width: 100%;
+  padding: 6vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--sand-ligth);
+}
+/* navBar */
+footer .navFooter ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .navFooter ul li {
+  margin-bottom: 15px;
+}
+footer .navFooter ul li a {
+  color: var(--black);
+  font-weight: 600;
+  transition: all 150ms ease-in-out;
+}
+footer .navFooter ul li a:hover {
+  text-decoration: underline;
+  color: var(--red-op);
+}
+/* contacto */
+footer .contactFooter div {
+  margin-bottom: 20px;
+}
+footer .contactFooter div .dato {
+  font-weight: 600px;
+  margin-bottom: 5px;
+}
+footer .contactFooter div .info {
+  color: var(--black);
+  text-decoration: underline;
+}
+/* logo */
+footer .logoFooter {
+  width: 15vw;
+}
+/* redes */
+footer .redesFooter {
+  display: flex;
+  flex-direction: column;
+}
+footer .redesFooter a {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: large;
+  text-decoration: none;
+  color: var(--black);
+}
