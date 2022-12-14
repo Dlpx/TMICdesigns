@@ -12,7 +12,6 @@
   --black: #000000;
   --black-light: #333333;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -136,7 +135,10 @@ main .sliderSection .contSlider .slider .sliderDiv .captions {
   width: 100%;
   height: fit-content;
   padding: 6vw;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: linear-gradient(
+    rgba(0, 0, 0, 0), 
+    rgba(0, 0, 0, 0.9)
+    );
 }
 main .sliderSection .contSlider .slider .sliderDiv .captions .captionTitle {
   font-size: 2rem;
@@ -152,7 +154,11 @@ main .sliderSection .contSlider .contBtnSlider{
     padding: 20px;
     position: absolute;
     top: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));  
+    background: linear-gradient(
+      90deg, 
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0)
+      );  
 }
 main .sliderSection .contSlider .contBtnSlider .btnSlider{
     position: relative;
@@ -163,7 +169,10 @@ main .sliderSection .contSlider .contBtnSlider .btnSlider{
 }
 main .sliderSection .contSlider .contBtnSliderDer{
     right: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(90deg, 
+    rgba(0, 0, 0, 0), 
+    rgba(0, 0, 0, 0.5)
+    );
 }
 
 /* Banner y Team */
