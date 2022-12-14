@@ -29,11 +29,10 @@
 header {
   z-index: 100;
   width: 100%;
-  height: 110px;
+  height: 130px;
   position: fixed;
   top: 0;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0)
   );
@@ -55,7 +54,7 @@ header .contHeader {
 header .contHeader .logo {
   height: fit-content;
   position: relative;
-  top: 30px;
+  top: 2.5vw;
   transition: all 150ms ease-in-out;
 }
 header .contHeader .logo img {
@@ -69,7 +68,7 @@ header .contHeader nav ul {
   flex-wrap: nowrap;
 }
 header .contHeader nav ul li {
-  margin-left: 15px;
+  margin-left: 2vw;
 }
 header .contHeader nav ul li .navLink {
   color: var(--sand-ligth);
@@ -193,7 +192,7 @@ main .bannerTeamSection .banner .button {
   color: var(--sand-ligth);
   background-color: var(--red-op);
   border: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   padding: 10px 20px;
   transition: all 150ms ease-in-out;
